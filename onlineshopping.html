@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store - Online Shopping</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset & Global Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background-color: #f7fafc; color: #1a202c; }
+        a { color: inherit; text-decoration: none; }
+        ul { list-style: none; }
+        button { cursor: pointer; border: none; font-family: inherit; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* Header */
+        header { background-color: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 50; }
+        header nav { display: flex; justify-content: space-between; align-items: center; height: 4rem; }
+        .nav-brand { font-size: 1.5rem; font-weight: 700; }
+        .nav-menu { display: none; }
+        .nav-menu a { margin-left: 1.5rem; color: #4a5568; }
+        .nav-menu a:hover { color: #3b82f6; }
+        .nav-icons { display: flex; align-items: center; gap: 1rem; }
+        .mobile-menu-button { display: block; }
+
+        /* Main Content & Products */
+        main .container { padding-top: 3rem; padding-bottom: 3rem; }
+        main h1 { font-size: 1.875rem; font-weight: 700; text-align: center; margin-bottom: 2.5rem; }
+        .products-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+        .product-card { background-color: #fff; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+        .product-card img { width: 100%; height: 14rem; object-fit: cover; }
+        .product-card .content { padding: 1.5rem; }
+        .product-card h2 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .product-card p { color: #4a5568; margin-bottom: 1rem; font-size: 0.9rem; }
+        .product-card .footer { display: flex; justify-content: space-between; align-items: center; }
+        .product-card .price { font-size: 1.5rem; font-weight: 700; }
+        .add-to-cart-btn { background-color: #3b82f6; color: #fff; padding: 0.5rem 1rem; border-radius: 9999px; font-weight: 600; transition: background-color 0.3s ease; }
+        .add-to-cart-btn:hover { background-color: #2563eb; }
+
+        /* Footer */
+        footer { background-color: #2d3748; color: #fff; padding: 2.5rem 0; margin-top: 3rem; }
+        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+        .footer-grid h3 { font-size: 1.125rem; margin-bottom: 1rem; }
+        .footer-grid p, .footer-grid a { color: #a0aec0; }
+        .footer-grid li { margin-bottom: 0.5rem; }
+        .footer-grid a:hover { color: #fff; }
+        .footer-bottom { margin-top: 2rem; border-top: 1px solid #4a5568; padding-top: 1.5rem; text-align: center; color: #718096; }
+
+        /* Responsive Design */
+        @media (min-width: 640px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 768px) { 
+            .nav-menu { display: flex; }
+            .mobile-menu-button { display: none; }
+            .footer-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+        @media (min-width: 1024px) { .products-grid { grid-template-columns: repeat(4, 1fr); } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="nav-brand">Online Store</a>
+                <div class="nav-menu">
+                    <a href="#">Home</a>
+                    <a href="#">Shop</a>
+                    <a href="#">Deals</a>
+                    <a href="#">About</a>
+                </div>
+                <div class="nav-icons">
+                    <a href="#"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg></a>
+                    <button class="mobile-menu-button"><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Featured Products</h1>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="smw.jpg" alt="Smart Watch">
+                    <div class="content">
+                        <h2>Futura Smart Watch</h2>
+                        <p>Stay connected and track your fitness with this sleek smart watch.</p>
+                        <div class="footer">
+                            <span class="price">Rs1,299</span>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="AWH.jpg" alt="Wireless Headphones">
+                    <div class="content">
+                        <h2>Aura Wireless Headphones</h2>
+                        <p>Immerse yourself in high-fidelity sound with noise-cancelling.</p>
+                        <div class="footer">
+                            <span class="price">Rs1,999</span>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="CDC.jpg" alt="Digital Camera">
+                    <div class="content">
+                        <h2>CapturePro DSLR Camera</h2>
+                        <p>Capture stunning photos and 4K videos with this pro-grade camera.</p>
+                        <div class="footer">
+                            <span class="price">Rs1,11,899</span>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="Laptop.jpg" alt="Laptop">
+                    <div class="content">
+                        <h2>Zenith Ultrabook</h2>
+                        <p>A powerful yet lightweight laptop for productivity on the go.</p>
+                        <div class="footer">
+                            <span class="price">Rs41,299</span>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>Online Store</h3>
+                    <p>Your one-stop shop for the latest in tech.</p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Follow Us</h3>
+                    <p>Stay connected on our social networks.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Online Store. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
