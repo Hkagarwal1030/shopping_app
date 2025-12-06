@@ -42,7 +42,7 @@ Social section placeholder
 
 🚀 Getting Started
 1️⃣ Clone the repo
-git clone https://github.com/your-username/online-store.git
+git clone https://github.com/Hkagarwal1030/online-store.git
 2️⃣ Navigate into the folder
 cd online-store
 3️⃣ Open the website
