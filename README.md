@@ -7,6 +7,9 @@ This project displays featured products, a stylish navigation bar, interactive p
 
 Add screenshots here later:<img width="1891" height="897" alt="image" src="https://github.com/user-attachments/assets/991c1362-0987-430e-acc0-b33105041198" />
 
+<img width="1913" height="921" alt="image" src="https://github.com/user-attachments/assets/e9e015bd-ff4e-4886-afbb-d7a065939587" />
+
+
 
 ✨ Features
 🧭 Modern Layout
